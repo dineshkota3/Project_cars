@@ -1,20 +1,41 @@
-This website is developed on lampp.
-The index.php file has the stack of cars placed on the top of one another. To get to the below car, we have to swipe the car on top to left. To get to the description page swipe to right.
-The conn_set.php file is used to connect with the localdata base named cars
-Styling.css is used for the styling of the swipe or drag fucntions
-test.js is used to validate whether the image is dragged to left or right. This is done by capturing the x-coordinates of the mouse up and mouse down events.
-description.php is shows the description of the car when swiped right, and it is styled using description.css.
-description.php knows which car is swiped right by the use of unique car id, you can observe this id in the url. The php files gets this id and performs sql query to get the description.
+To set up on localhost(lampp):
 
-folder structure.
+first start the server , command : sudo /opt/lampp/lampp start (it may vary accordingly, please follow as per your device)
 
-index.php and description.php are in the root folder.
-images of cars are named after their id, they are placed in the image folder,
-javascripts are placed in the js folder.
-css style sheets are placed in the css folder.
+Download or clone the repository : git clone https://github.com/dineshkota3/Project_cars.git
 
-Database structure:
+inside the Project_cars/ you will find the tindercars/
 
-the database contains one table.
-The table has 8 columns named id, name, year,color, weight,height,dealer,number. These 8 attributes together make up the description of car. Each car has a unique id.
+Inside the folder tindercars/ you will find the sql file i.e. localhost.sql
+
+start the localhost server. Go to http://localhost/phpmyadmin/
+
+There you can find the import tab which is in between export and settings. Click on that.
+
+You will be redirected to a page where you have to upload the localhost.sql file which is present in Project_cars/tindercars
+
+click on the browse button and upload the localhost.sql
+
+Then scroll down to bottom, there you find Go button. Click on it.
+
+Now sql database cars has been created with table carsid with five rows in it. Please check once.
+
+now copy paste the tindercars folder to htdocs present in lampp folder. 
+
+command for copy : sudo cp -r path_to_cloned_repository/Project_cars/tindercars/ /opt/lampp/htdocs
+
+or in the terminal navigate to Project_cars folder, then execute  sudo cp -r tindercars/ /opt/lampp/htdocs
+
+Now go to browser and type in localhost/tindercars
+
+For Mobile:
+
+After all the things done above , assuming that the laptop is connected to wifi.
+
+open terminal , type in command : ifconfig
+
+under "wlan0" you see an ipaddress of format 10.0.x.x or 192.168.x.x 
+
+go to chrome in mobile, in url address type in 10.0.x.x/tindercars or 192.168.x.x/tindercars accordingly
+
 
