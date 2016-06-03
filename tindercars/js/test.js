@@ -21,7 +21,7 @@ el.addEventListener("mouseup", function(upevent){
     x_up = upevent.clientX;
     y_up = upevent.clientY;
     
-    if((x_down - x_up)>0){
+    if((x_down - x_up)>20){
 		
 		d[count-1].innerHTML = d[count-1].innerHTML + '<div class="status dislike">Dislike!</div>';
 		
@@ -30,7 +30,7 @@ el.addEventListener("mouseup", function(upevent){
 		
 		
 	}
-	else{
+	else if((x_down - x_up)<-20){
 		d[count-1].innerHTML = d[count-1].innerHTML + '<div class="status like">Like!</div>';
 		d[count -1].className += " rotate-left";
 		var url = d[count -1].getAttribute("href");

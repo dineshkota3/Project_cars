@@ -34,5 +34,6 @@
 ?>
 
 <script src="./js/test.js"></script>
+<script src="./js/mobile.js"></script>
 
 </html>
